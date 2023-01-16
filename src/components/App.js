@@ -6,7 +6,7 @@ import { useState } from "react";
 function App() {
 const [isDark, setIsDark] = useState(false);
 
-function buttonClick() {
+function changeMode() {
   setIsDark((isDark) => !isDark);
 }
 
@@ -18,7 +18,7 @@ function buttonClick() {
     <div className={isDark? "App dark" : "App light"}>
       <header>
         <h2>Shopster</h2>
-        <button onClick={buttonClick}>Toggle view Mode</button>
+        <button onClick={changeMode}>Change Mode</button>
       </header>
       <ShoppingList items={itemData} />
     </div>
